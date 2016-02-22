@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Front end Test - sound module made with HTML5, CSS3, jQuery Animation</title>
+    <meta name="viewport" content="width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='css/timer_module.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<div class="timer-container">
+    <div id="timer-module" data-state="on">
+        <div class="row">
+            <div class="col s8 screen">
+                <div class="clock"></div>
+                <div class="display-number">
+                    <div class="digits">
+                        <span class="time" id="timeToChange">100</span>
+                        <span class="under">8888</span>
+                    </div>
+                    <div class="rate" id="rateToChange">MIN</div>
+                </div>
+            </div>
+            <div class="col s4 controls">
+                <div class="col s12 updown">
+                    <button class="btn_up" id="btnPlus"></button>
+                    <button class="btn_down" id="btnMinus"></button>
+                </div>
+                <div class="col s12 power">
+                    <button class="btn_power" id="btnPower"><span class="led on"></span><span class="label">PWR</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s4 toggle">
+                <div class="leftLabel">MIN</div>
+                <div class="switch" id="btnRateSwitch" data-switch="MIN">
+                    <div class="inner left"></div>
+                </div>
+                <div class="rightLabel">HRS</div>
+            </div>
+            <div class="col s8 slider">
+                <div class="nstSlider" data-range_min="0" data-range_max="1000" data-cur_min="0">
+                    <div class="bar"></div>
+                    <div class="leftGrip"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery.nstSlider.min.js"></script>
+<script src="js/timer_module.js"></script>
+</body>
+</html>

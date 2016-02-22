@@ -1,0 +1,196 @@
+@import "reset.css";
+@import "fonts.css";
+@import "jquery.nstSlider.css";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #282828;
+    position: relative;
+}
+button {
+    outline: none;
+    border: none;
+}
+
+.timer-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer-module {
+    width: 318px;
+    height: 158px;
+    background: url("../img/device.png") 0 0 no-repeat transparent;
+    position: relative;
+    color: #fff;
+}
+.row {width:100%;clear:both;overflow: auto;}
+
+.screen {
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    width: 191px;
+    height: 64px;
+    background: url("../img/background_screen.png") 0 0 no-repeat transparent;
+    position: relative;
+}
+.screen .clock {
+    background: url("../img/icon_clock_on.png") 0 0 no-repeat transparent;
+    width: 57px;
+    height: 57px;
+    float:left;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.screen .clock.off {
+    background: url("../img/icon_clock_off.png") 0 0 no-repeat transparent;
+    width: 57px;
+    height: 57px;
+    float:left;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.screen .display-number .digits {
+    font-family: "ds-digitalbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    top: 7px;
+    right: 44px;
+}
+.screen .display-number .digits span.under {
+    font-size: 2.8em;
+    color: #1a1a1c;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0.5;
+}
+.screen .display-number .digits span.time {
+    font-size: 2.8em;
+    color: #c3fefe;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+.screen .display-number .rate {
+    font-family: "ds-digitalnormal", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    color: #c3fefe;
+    position: absolute;
+    right: 7px;
+    top: 24px;
+}
+
+.controls {
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.controls div {
+    width: 53px;
+    height: 29px;
+    background: url("../img/bk_2btn.png") 0 0 no-repeat transparent;
+}
+.updown {
+    padding: 0;
+    margin-bottom: 6px;
+}
+.updown button.btn_down {
+    width: 22px;
+    height: 24px;
+    background: url("../img/Button_down.png") 0 0 no-repeat transparent;
+    margin: 3px 0 0 0;
+    cursor: pointer;
+}
+.updown button.btn_up {
+    width: 22px;
+    height: 24px;
+    background: url("../img/Button_up.png") 0 0 no-repeat transparent;
+    margin: 3px 0 1px 2px;
+    cursor: pointer;
+}
+.power {
+    padding: 0;
+}
+.power button.btn_power {
+    width: 47px;
+    height: 24px;
+    background: url("../img/PWR_Button.png") 0 0 no-repeat transparent;
+    margin: 3px 2px 2px 3px;
+    position: relative;
+    cursor: pointer;
+}
+.power button.btn_power .label {
+    font-size: 0.5em;
+    color: #fff;
+    text-decoration: none;
+    top: 9px;
+    position: absolute;
+}
+.power button.btn_power .led.on {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: url("../img/PWR_Button_onLED.png") 0 0 no-repeat transparent;
+}
+.power button.btn_power .led.off {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: url("../img/PWR_Button_offLED.png") 0 0 no-repeat transparent;
+}
+.toggle {
+    position: relative;
+    margin-top: 18px;
+    margin-left: 30px;
+}
+.toggle .leftLabel {
+    float:left;
+    font-size: 0.6em;
+    margin-top: 2px;
+    margin-right: 6px;
+    color: #b4b4b5;
+}
+.toggle .switch {
+    float:left;
+    position: relative;
+    background: url("../img/Toggle.png") 0 0 no-repeat transparent;
+    width:29px;
+    height:17px;
+}
+.toggle .switch .inner {
+    position: absolute;
+    top: 1px;
+    background: url("../img/Slider.png") 0 0 no-repeat transparent;
+    width:16px;
+    height:16px;
+    transition: left 0.5s, transform 0.5s;
+}
+.toggle .switch .inner.left {
+    left: 1px;
+}
+.toggle .switch .inner.right {
+    left: 11px;
+}
+
+.toggle .rightLabel {
+    float:left;
+    font-size: 0.6em;
+    margin-top: 2px;
+    margin-left: 6px;
+    color: #b4b4b5;
+}
+
+.slider {
+    background: url("../img/Slider_bk.png") 8px 0 no-repeat transparent;
+    margin-left: 8px;
+    float: left;
+}
